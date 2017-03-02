@@ -11,10 +11,12 @@ namespace FakeTrello.Models
         [Key]
         public int CardId { get; set; }
 
-        public string Name { get; set; }
+        [MaxLength(60)]
+        public string Title { get; set; }
 
-        public string 
+        [MaxLength(60)]
+        public string Description { get; set; }
 
-
+        //does not link to any other card so no public list needed here.
     }
 }

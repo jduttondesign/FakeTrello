@@ -24,7 +24,6 @@ namespace FakeTrello.Models
         public string FullName { get; set; }
 
         public ApplicationUser BaseUser { get; set; }//1 to 1 relationship
-
         public List<Board> Boards { get; set; }//1 to many (boards) relationship  can get the mysql for you .board
     }
 }

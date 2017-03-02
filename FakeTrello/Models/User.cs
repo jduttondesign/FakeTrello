@@ -6,10 +6,10 @@ using System.Web;
 
 namespace FakeTrello.Models
 {
-    public class Users2
+    public class User
     {
         [Key]
-        public int Users2Id { get; set; }
+        public int UserId { get; set; }
 
         [MaxLength(60)]
         public string UserName { get; set; }
@@ -23,7 +23,6 @@ namespace FakeTrello.Models
         [MaxLength(60)]
         public string PasswordHash { get; set; }
 
-        public List<Board> Card { get; set; }
-
+        public List<Board> Boards { get; set; }
     }
 }
