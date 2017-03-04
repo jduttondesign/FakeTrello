@@ -15,5 +15,7 @@ namespace FakeTrello.Models
         public string Name { get; set; }
 
         public List<Card> Cards { get; set; }
+        //<Card> is the model
+        //List generic tpe of list
     }
 }

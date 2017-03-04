@@ -18,5 +18,9 @@ namespace FakeTrello.Models
         public string Description { get; set; }
 
         //does not link to any other card so no public list needed here.
+        //we provide navigation see below; we are saying return all columns not just the ID
+        //Auxiliary: given a card instance, return the list it belongs to. 
+        public List BelongsTo { get; set; }
+
     }
 }

@@ -17,6 +17,9 @@ namespace FakeTrello.Models
         [MaxLength(60)]
         public string URL { get; set; }
 
+        //Auxiliary (ie not required to dive/define relationship)
+        public TrelloUser Owner { get; set; }
+
         public List<List> Lists { get; set; }
     }
 }
