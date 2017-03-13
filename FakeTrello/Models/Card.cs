@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+=======
+﻿using System.ComponentModel.DataAnnotations;
+>>>>>>> fa2c08222308104e2613f410df4833b7ad863065
 
 namespace FakeTrello.Models
 {
@@ -11,6 +15,7 @@ namespace FakeTrello.Models
         [Key]
         public int CardId { get; set; }
 
+<<<<<<< HEAD
         [MaxLength(60)]
         public string Title { get; set; }
 
@@ -25,5 +30,13 @@ namespace FakeTrello.Models
         //Auxiliary: given a card instance, return the list it belongs to. 
         public List BelongsTo { get; set; }
 
+=======
+        public string Title { get; set; }
+        public string Description { get; set; }
+
+        // Auxiliary: given a card instance,
+        // return the list it belongs to.
+        public List BelongsTo { get; set; }
+>>>>>>> fa2c08222308104e2613f410df4833b7ad863065
     }
 }
