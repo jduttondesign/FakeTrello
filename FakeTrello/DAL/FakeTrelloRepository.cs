@@ -8,10 +8,15 @@ namespace FakeTrello.DAL
 {
     public class FakeTrelloRepository : IRepository
     {
+
+
         public FakeTrelloContext Context { get; set; }
+        //private FakeTrelloContext context; // Data member
 
         public FakeTrelloRepository()
         {
+            Context = new FakeTrelloContext();
+
         }
 
         public FakeTrelloRepository(FakeTrelloContext context)
@@ -59,17 +64,19 @@ namespace FakeTrello.DAL
 
         public Board GetBoard(int boardId)
         {
-            //select from boards where Boardid == boardId
-            Board found_board = Context.Boards.FirstOrDefault(b => b.BoardId == boardId); //returns null if nothing is found.
+            // SELECT * FROM Boards WHERE BoardId == boardId 
+            Board found_board = Context.Boards.FirstOrDefault(b => b.BoardId == boardId); // returns null if nothing is found
             return found_board;
-            //using .First()
-            //try{
-            //Board found_board = Context.Boards.First(b => b.BoardId == boardId);
-            //return found_board;
-            //}catch (Exception e){
-            //return null;
-            //}
-            //Context.Boards.First();//Throw and exception if nothing is found
+
+            /* Using .First() throws an exception if nothing is found
+             * try {
+             * Board found_board = Context.Boards.First(b => b.BoardId == boardId); 
+             * return found_board;
+             * } catch(Exception e) {
+             * return null;
+             * }
+             */
+
         }
 
         public List<Board> GetBoardsFromUser(string userId)
